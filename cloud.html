@@ -13,56 +13,57 @@
 </head>
 <body>
 
-<!-- v2 / CLOUD build only. The no-data v1 policy is store/privacy-policy.html — do not confuse them.
-     Publish THIS one only when a data-collecting build (anonymous cloud backup + usage stats) is the
-     version on Play. Model is ANONYMOUS: no account, no email — see cloud.js. -->
+<!-- v2 / TELEMETRY build. The no-data v1 policy is store/privacy-policy.html — do not confuse them.
+     This page is the URL declared in Play Console → Data safety, and PRIVACY_URL in config.js links
+     the in-app consent notice here. It must describe ONLY what the shipped build actually sends.
+     Current posture (versionCode 10): CLOUD_ENABLED=true, CLOUD_PROFILE_BACKUP=false, AI_ENABLED=false
+     → anonymous usage stats only; NO nickname, NO progress backup, NO AI-tutor upload.
+     If profile backup or the AI tutor is ever switched back on, the removed sections must come back
+     here AND the Data-safety declaration must be widened to match. -->
 
 <h1>מדיניות פרטיות — מתמטי-כיף</h1>
-<p><strong>עודכן לאחרונה:</strong> 22 ביולי 2026</p>
+<p><strong>עודכן לאחרונה:</strong> 4 באוגוסט 2026</p>
 
 <p>אפליקציית <strong>מתמטי-כיף</strong> ("האפליקציה") היא אפליקציית תרגול חשבון לימודית. שמירת הפרטיות
 של המשתמשים, ובמיוחד של ילדים, חשובה לנו. מסמך זה מסביר אילו נתונים האפליקציה אוספת כאשר הורה מפעיל
-את <strong>הגיבוי בענן ואיסוף נתוני השימוש</strong>.</p>
+את <strong>איסוף נתוני השימוש האנונימיים</strong>.</p>
 
 <h2>שימוש ללא איסוף נתונים</h2>
-<p>אפשר להשתמש באפליקציה <strong>במלואה ללא אינטרנט וללא איסוף נתונים כלשהו</strong>. במצב זה ההתקדמות
-נשמרת <strong>אך ורק על המכשיר</strong> ואינה עוזבת אותו. הגיבוי ואיסוף נתוני השימוש הם תכונה
+<p>אפשר להשתמש באפליקציה <strong>במלואה ללא אינטרנט וללא איסוף נתונים כלשהו</strong>. ההתקדמות נשמרת
+<strong>אך ורק על המכשיר</strong> ואינה עוזבת אותו בשום מצב. איסוף נתוני השימוש הוא תכונה
 <strong>אופציונלית</strong> שההורה מפעיל ביודעין, דרך הודעה חד-פעמית או ב"אזור הורים".</p>
 
 <h2>בלי חשבון ובלי אימייל</h2>
-<p>אין צורך ליצור חשבון ואין צורך להזין אימייל, שם או סיסמה. כאשר הגיבוי מופעל, המכשיר מקבל
-<strong>מזהה אנונימי</strong> שאינו מקושר לזהות אמיתית, וכל הנתונים נשמרים תחת המזהה הזה בלבד.</p>
+<p>אין צורך ליצור חשבון ואין צורך להזין אימייל, שם או סיסמה. כאשר האיסוף מופעל, ההתקנה מקבלת
+<strong>מזהה אנונימי אקראי</strong> שאינו מקושר לזהות אמיתית, וכל הנתונים נשמרים תחת המזהה הזה בלבד.</p>
 
 <h2>אילו נתונים נאספים (רק כשההורה מפעיל)</h2>
 <ul>
-  <li><strong>נתוני התרגול</strong> — התקדמות הלמידה: תרגילים שנפתרו, רמות, נקודות, הישגים (לגיבוי).</li>
-  <li><strong>כינוי הילד/ה</strong> — שם תצוגה שההורה בוחר (אין צורך בשם אמיתי), נשמר עם הגיבוי בלבד.</li>
-  <li><strong>נתוני שימוש אנונימיים</strong> — באילו משחקים ופעילויות נעשה שימוש וכמה זמן; ולפי מזהה שאלה שנוצר על-ידי האפליקציה — כמה ניסיונות היו, כמה נפתרו נכון בניסיון הראשון, כמה דרשו עזרה וכמה זמן נדרש. לא נשמרים נוסח השאלה שהוצג, התשובה שהוקלדה, שם או כינוי. המידע משמש לאיתור שאלות קשות או לא ברורות ולשיפור האפליקציה. אין מעקב בין אפליקציות.</li>
+  <li><strong>נתוני שימוש אנונימיים</strong> — באילו משחקים ומודולים נעשה שימוש וכמה זמן; ולפי מזהה שאלה
+  שנוצר על-ידי האפליקציה — כמה ניסיונות היו, כמה נפתרו נכון בניסיון הראשון, כמה דרשו עזרה וכמה זמן נדרש.
+  המידע משמש לאיתור שאלות קשות או לא ברורות ולשיפור האפליקציה. אין מעקב בין אפליקציות.</li>
 </ul>
-<p>איננו אוספים מהילד/ה שם אמיתי, אימייל, טלפון, מיקום, אנשי קשר או מזהים אישיים אחרים.</p>
 
-<h2>מורה ה-AI (חטיבת ביניים)</h2>
-<p>אם משתמשים בכפתורי הבדיקה/הפתרון של מורה ה-AI, <strong>תמונת הפתרון הכתוב וטקסט השאלה</strong>
-נשלחים לשרת שלנו ולספק ה-AI שלנו (Anthropic) לצורך <strong>עיבוד בלבד</strong> — קבלת בדיקה או פתרון.
-העיבוד <strong>חד-פעמי</strong>, איננו שומרים את התמונות, והן <strong>אינן משמשות לאימון מודלים</strong>.</p>
+<h2>מה לא נשלח</h2>
+<p><strong>ההתקדמות, הפרופילים והכינויים נשמרים במכשיר בלבד ואינם נשלחים.</strong> כמו כן לא נשלחים נוסח
+השאלה שהוצג, התשובה שהוקלדה, שם אמיתי, אימייל, טלפון, מיקום, אנשי קשר, תמונות או מזהים אישיים אחרים.</p>
 
 <h2>למה הנתונים משמשים</h2>
-<p>נתוני התרגול משמשים <strong>לגיבוי ההתקדמות</strong>; נתוני השימוש משמשים <strong>לשיפור האפליקציה</strong>
-בלבד. הנתונים <strong>אינם נמכרים</strong>, אינם משמשים לפרסום, ואין באפליקציה פרסומות או כלי מעקב/אנליטיקה
-של צד שלישי.</p>
+<p>נתוני השימוש משמשים <strong>לשיפור האפליקציה בלבד</strong>. הנתונים <strong>אינם נמכרים</strong>,
+אינם משמשים לפרסום, ואין באפליקציה פרסומות או כלי מעקב/אנליטיקה של צד שלישי.</p>
 
 <h2>היכן נשמרים הנתונים וכמה זמן</h2>
 <p>הנתונים נשמרים אצל ספק התשתית <strong>Supabase</strong> (שרתים באיחוד האירופי), עם בידוד לפי מזהה:
-כל מכשיר רואה אך ורק את הנתונים שלו (אכיפה ברמת מסד הנתונים — Row-Level Security). נתוני השימוש נשמרים
+כל התקנה רואה אך ורק את הנתונים שלה (אכיפה ברמת מסד הנתונים — Row-Level Security). נתוני השימוש נשמרים
 עד כ-<strong>12 חודשים</strong> ולאחר מכן נמחקים.</p>
 
 <h2>שיתוף עם צד שלישי</h2>
-<p>איננו משתפים נתונים עם צדדים שלישיים, למעט ספקי התשתית הפועלים בשמנו לצורך התפעול בלבד: Supabase
-(אחסון) ו-Anthropic (עיבוד בקשות מורה ה-AI, כאשר משתמשים בו).</p>
+<p>איננו משתפים נתונים עם צדדים שלישיים, למעט ספק התשתית הפועל בשמנו לצורך התפעול בלבד:
+<strong>Supabase</strong> (אחסון).</p>
 
 <h2>שליטת ההורה ומחיקה</h2>
-<p>ההורה יכול לכבות את הגיבוי והאיסוף בכל עת ב"אזור הורים", ולמחוק את כל נתוני הענן בלחיצה אחת
-(כפתור "מחיקת כל נתוני הענן"). אפשר גם לפנות לכתובת המייל למטה, ונטפל בבקשה.</p>
+<p>ההורה יכול לכבות את האיסוף בכל עת ב"אזור הורים", ולמחוק את כל הנתונים מהשרת בלחיצה אחת
+(כפתור "מחיקת כל הנתונים מהשרת"). אפשר גם לפנות לכתובת המייל למטה, ונטפל בבקשה.</p>
 
 <h2>פרטיות ילדים</h2>
 <p>האפליקציה מיועדת גם לילדים. נתונים נאספים אך ורק <strong>לאחר שהורה/אפוטרופוס נתן את הסכמתו</strong>
@@ -76,22 +77,20 @@
 
 <div class="en">
 <h1>Privacy Policy — Matmati-Kef (English summary)</h1>
-<p><strong>Last updated:</strong> July 22, 2026</p>
+<p><strong>Last updated:</strong> August 4, 2026</p>
 <p><strong>Matmati-Kef</strong> is an educational math-practice app. It works fully <strong>offline with no
-data collection</strong>; in that mode all data stays on the device. Optional <strong>cloud backup and
-usage statistics</strong> are enabled by a parent and use <strong>no account and no email</strong> — the
-device gets an <strong>anonymous id</strong> and all data is stored under it. When enabled, the app collects
-only: the child's <strong>learning progress</strong> (for backup), the child's <strong>nickname</strong>
-(parent-chosen display name, not a required real name, stored with the backup), and <strong>anonymous usage
-statistics</strong> (games/activities and time, plus app-authored question identifiers with aggregate
-first-try success, failure, help use and response time; never the entered answer, prompt, name or
-nickname, and no cross-app tracking) to identify questions that need improvement. If the <strong>AI tutor</strong> buttons are used, the handwriting
-image and problem text are sent to our server and our AI provider (Anthropic) for <strong>one-time
-processing only</strong> — images are not stored by us and are not used to train models. Data is
-<strong>never sold</strong>, and the app has <strong>no ads, no analytics SDKs, and no third-party
-tracking</strong>. Data is stored on <strong>Supabase</strong> (EU servers), isolated per install via
-Row-Level Security; usage data is kept up to ~12 months. Parents can turn collection off and delete all
-cloud data in-app at any time, per Google Play's Families policy and COPPA / GDPR-K. Contact / deletion:
+data collection</strong>, and the child's progress, profiles and nicknames <strong>always stay on the
+device</strong> — they are never uploaded. Optional <strong>anonymous usage statistics</strong> are enabled
+by a parent and use <strong>no account and no email</strong> — the install gets a <strong>random anonymous
+id</strong> and all data is stored under it. When enabled, the app collects only <strong>anonymous usage
+statistics</strong>: which games and modules were used and for how long, plus app-authored question
+identifiers with aggregate first-try success, failure, help use and response time — never the entered
+answer, the prompt text, a name, a nickname, photos or location, and no cross-app tracking. This is used
+to identify questions that need improvement. Data is <strong>never sold</strong>, and the app has
+<strong>no ads, no analytics SDKs, and no third-party tracking</strong>. Data is stored on
+<strong>Supabase</strong> (EU servers), isolated per install via Row-Level Security; usage data is kept up
+to ~12 months. Parents can turn collection off and delete all server data in-app at any time, per Google
+Play's Families policy and COPPA / GDPR-K. Contact / deletion:
 <a href="mailto:yahavsiso2@gmail.com">yahavsiso2@gmail.com</a></p>
 </div>
 

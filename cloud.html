@@ -3,95 +3,155 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>מדיניות פרטיות — מתמטי-כיף (גרסת ענן)</title>
+<title>מדיניות פרטיות — מתמטי-כיף</title>
 <style>
-  body{font-family:system-ui,Arial,sans-serif;max-width:760px;margin:40px auto;padding:0 18px;line-height:1.7;color:#1c2333}
-  h1{font-size:1.6rem} h2{font-size:1.15rem;margin-top:1.8em}
-  .en{direction:ltr;text-align:left;border-top:1px solid #ddd;margin-top:2.5em;padding-top:1.5em;color:#444}
+  body{font-family:system-ui,Arial,sans-serif;max-width:760px;margin:40px auto;padding:0 18px;line-height:1.7;color:#1c2333;background:#fff}
+  h1{font-size:1.6rem}
+  h2{font-size:1.15rem;margin-top:1.8em}
+  ul{padding-inline-start:1.4em}
+  li{margin:0.4em 0}
   code{background:#f2f3f7;padding:1px 5px;border-radius:4px}
+  .en{direction:ltr;text-align:left;border-top:1px solid #ddd;margin-top:2.5em;padding-top:1.5em;color:#333}
+  .placeholder{background:#fff3cd;padding:0 4px;border-radius:3px}
+  @media (max-width:480px){ body{margin:20px auto;padding:0 14px} h1{font-size:1.35rem} }
 </style>
 </head>
 <body>
 
-<!-- v2 / TELEMETRY build. The no-data v1 policy is store/privacy-policy.html — do not confuse them.
-     This page is the URL declared in Play Console → Data safety, and PRIVACY_URL in config.js links
-     the in-app consent notice here. It must describe ONLY what the shipped build actually sends.
-     Current posture (versionCode 10): CLOUD_ENABLED=true, CLOUD_PROFILE_BACKUP=false, AI_ENABLED=false
-     → anonymous usage stats only; NO nickname, NO progress backup, NO AI-tutor upload.
-     If profile backup or the AI tutor is ever switched back on, the removed sections must come back
-     here AND the Data-safety declaration must be widened to match. -->
-
 <h1>מדיניות פרטיות — מתמטי-כיף</h1>
-<p><strong>עודכן לאחרונה:</strong> 4 באוגוסט 2026</p>
+<p><strong>תאריך תחולה:</strong> 19 בספטמבר 2026</p>
 
-<p>אפליקציית <strong>מתמטי-כיף</strong> ("האפליקציה") היא אפליקציית תרגול חשבון לימודית. שמירת הפרטיות
-של המשתמשים, ובמיוחד של ילדים, חשובה לנו. מסמך זה מסביר אילו נתונים האפליקציה אוספת כאשר הורה מפעיל
-את <strong>איסוף נתוני השימוש האנונימיים</strong>.</p>
+<p>אפליקציית <strong>מתמטי-כיף</strong> ("האפליקציה") היא אפליקציית תרגול חשבון לימודית. מסמך זה
+מתאר בדיוק אילו נתונים האפליקציה שולחת מחוץ למכשיר, מתי, ולאילו מטרות.</p>
 
-<h2>שימוש ללא איסוף נתונים</h2>
-<p>אפשר להשתמש באפליקציה <strong>במלואה ללא אינטרנט וללא איסוף נתונים כלשהו</strong>. ההתקדמות נשמרת
-<strong>אך ורק על המכשיר</strong> ואינה עוזבת אותו בשום מצב. איסוף נתוני השימוש הוא תכונה
-<strong>אופציונלית</strong> שההורה מפעיל ביודעין, דרך הודעה חד-פעמית או ב"אזור הורים".</p>
+<h2>אין חשבון, אין פרסומות, אין מעקב צד שלישי</h2>
+<p>אין באפליקציה הרשמה, התחברות, שם משתמש או סיסמה. אין פרסומות, אין מזהה פרסום/מכשיר לפרסום
+(Advertising ID / IDFA), אין רכישות בתוך האפליקציה, ואין כלי אנליטיקה או ניטור קריסות של צד שלישי.
+בגרסה הנוכחית אין גם תכונות בינה מלאכותית (AI) כלשהן.</p>
 
-<h2>בלי חשבון ובלי אימייל</h2>
-<p>אין צורך ליצור חשבון ואין צורך להזין אימייל, שם או סיסמה. כאשר האיסוף מופעל, ההתקנה מקבלת
-<strong>מזהה אנונימי אקראי</strong> שאינו מקושר לזהות אמיתית, וכל הנתונים נשמרים תחת המזהה הזה בלבד.</p>
+<h2>ספק אחסון אחד בלבד: Supabase</h2>
+<p>כאשר נתונים כן נשלחים (ראו בהמשך), הם נשלחים לספק אחסון אחד — <strong>Supabase</strong> — תחת
+<strong>מזהה התקנה אנונימי</strong> שנוצר על המכשיר. אין דוא״ל, אין סיסמה ואין חשבון אמיתי מאחורי
+המזהה הזה.</p>
 
-<h2>אילו נתונים נאספים (רק כשההורה מפעיל)</h2>
+<h2>שום דבר לא נשלח לפני אישור הורה</h2>
+<p>בפעם הראשונה שהאפליקציה מנסה לשלוח נתונים כלשהם, מוצגת הודעה חד-פעמית המיועדת להורה, ושום בית
+(byte) לא נשלח לפני שההורה מאשר אותה. אפשר לסרב, ואז האפליקציה ממשיכה לעבוד באופן מלא ומקומי בלבד.</p>
+
+<h2>אילו נתונים נשלחים, ולמה</h2>
+<p>לאחר אישור ההורה, ורק אז, נשלחות שלוש קבוצות נתונים נפרדות:</p>
 <ul>
-  <li><strong>נתוני שימוש אנונימיים</strong> — באילו משחקים ומודולים נעשה שימוש וכמה זמן; ולפי מזהה שאלה
-  שנוצר על-ידי האפליקציה — כמה ניסיונות היו, כמה נפתרו נכון בניסיון הראשון, כמה דרשו עזרה וכמה זמן נדרש.
-  המידע משמש לאיתור שאלות קשות או לא ברורות ולשיפור האפליקציה. אין מעקב בין אפליקציות.</li>
+  <li><strong>סיכום שימוש יומי אנונימי</strong> — אילו נושאים/משחקים נפתחו, כמה תרגילים נענו נכון,
+    שגוי או בעזרה, וכמה זמן נמשך השימוש. <strong>לא</strong> נשלחות התשובות שהוקלדו ולא נשלח שם או
+    כינוי יחד עם קובץ זה.</li>
+  <li><strong>כינוי הפרופיל</strong> שההורה בחר עבור הילד/ה — נשלח בנפרד, ומשמש <strong>אך ורק</strong>
+    את לוח הבקרה הפרטי של המפתח (לא נגיש לציבור ולא למשתמשים אחרים) לצורך תיוג נתוני השימוש לפי ילד.</li>
+  <li><strong>כינוי הפרופיל + ניקוד</strong> — כאשר משחק ב<strong>לוח השיאים העולמי</strong> המשותף,
+    הכינוי והניקוד <strong>מוצגים בפומבי</strong> לשחקנים אחרים באפליקציה.</li>
 </ul>
 
-<h2>מה לא נשלח</h2>
-<p><strong>ההתקדמות, הפרופילים והכינויים נשמרים במכשיר בלבד ואינם נשלחים.</strong> כמו כן לא נשלחים נוסח
-השאלה שהוצג, התשובה שהוקלדה, שם אמיתי, אימייל, טלפון, מיקום, אנשי קשר, תמונות או מזהים אישיים אחרים.</p>
+<h2>בטיחות הכינוי בלוח השיאים</h2>
+<p>הכינוי נבדק הן במכשיר והן בשרת: אורך של 2–16 תווים, וחסימת מילים פוגעניות, קישורים, כתובות דוא״ל
+ומספרי טלפון. לכל רשומה בלוח השיאים יש אפשרות "דיווח". רשומה שדווחה על-ידי <strong>3 מכשירים
+שונים</strong> מוסתרת אוטומטית עד לבדיקה ידנית של המפתח. כל מכשיר יכול גם לחסום שחקן אחר באופן מקומי
+בלבד (החסימה נשמרת על המכשיר ואינה נשלחת). דיווח שומר את המזהה האנונימי של המכשיר המדווח, את הרשומה
+המדווחת ואת הסיבה שנבחרה מרשימה סגורה — ללא טקסט חופשי.</p>
 
-<h2>למה הנתונים משמשים</h2>
-<p>נתוני השימוש משמשים <strong>לשיפור האפליקציה בלבד</strong>. הנתונים <strong>אינם נמכרים</strong>,
-אינם משמשים לפרסום, ואין באפליקציה פרסומות או כלי מעקב/אנליטיקה של צד שלישי.</p>
+<h2>בקרת הורים ("אזור הורים")</h2>
+<p>דרך אזור ההורים המוגן בקוד PIN אפשר בכל עת: לכבות את שליחת הנתונים (וגם למחוק מיידית את רשומות
+לוח השיאים של הילד/ה), למחוק את כל מה שכבר נשלח לשרת, לבטל חסימות שחקנים, לצפות בקישור למדיניות
+פרטיות זו וליצור קשר.</p>
 
-<h2>היכן נשמרים הנתונים וכמה זמן</h2>
-<p>הנתונים נשמרים אצל ספק התשתית <strong>Supabase</strong> (שרתים באיחוד האירופי), עם בידוד לפי מזהה:
-כל התקנה רואה אך ורק את הנתונים שלה (אכיפה ברמת מסד הנתונים — Row-Level Security). נתוני השימוש נשמרים
-עד כ-<strong>12 חודשים</strong> ולאחר מכן נמחקים.</p>
+<h2>התקנה מחדש / מחיקת האפליקציה</h2>
+<p>המזהה האנונימי נשמר על המכשיר בלבד. הסרת האפליקציה מוחקת אותו — ולכן מומלץ למחוק נתונים דרך אזור
+ההורים <strong>לפני</strong> הסרת האפליקציה, לא אחריה. אפשר לבקש מחיקת נתונים המשויכים להתקנה ישנה
+גם לאחר מכן, בפנייה בדוא״ל, רצוי בצירוף קוד ההתקנה המוצג באזור ההורים אם עדיין קיים.</p>
 
-<h2>שיתוף עם צד שלישי</h2>
-<p>איננו משתפים נתונים עם צדדים שלישיים, למעט ספק התשתית הפועל בשמנו לצורך התפעול בלבד:
-<strong>Supabase</strong> (אחסון).</p>
+<h2>הקראה בקול</h2>
+<p>תכונת ההקראה משתמשת במנוע הדיבור המובנה של המכשיר. האפליקציה אינה מקליטה ואינה שולחת שום קובץ
+שמע.</p>
 
-<h2>שליטת ההורה ומחיקה</h2>
-<p>ההורה יכול לכבות את האיסוף בכל עת ב"אזור הורים", ולמחוק את כל הנתונים מהשרת בלחיצה אחת
-(כפתור "מחיקת כל הנתונים מהשרת"). אפשר גם לפנות לכתובת המייל למטה, ונטפל בבקשה.</p>
+<h2>מה נשאר על המכשיר בלבד</h2>
+<p>התקדמות, הישגים והגדרות אישיות נשמרים על המכשיר בלבד ואינם חלק מהנתונים הנשלחים לעיל.</p>
 
-<h2>פרטיות ילדים</h2>
-<p>האפליקציה מיועדת גם לילדים. נתונים נאספים אך ורק <strong>לאחר שהורה/אפוטרופוס נתן את הסכמתו</strong>
-בהודעה החד-פעמית, בהתאם למדיניות Google Play למשפחות ולעקרונות COPPA ו-GDPR-K.</p>
-
-<h2>שינויים במדיניות</h2>
-<p>אם המדיניות תתעדכן, הגרסה המעודכנת תתפרסם בכתובת זו עם תאריך עדכון חדש.</p>
+<h2>ילדים</h2>
+<p>האפליקציה אינה מבקשת מהילד/ה שם מלא, כתובת דוא״ל, מספר טלפון או מיקום. את כינוי הפרופיל בוחר
+ההורה.</p>
 
 <h2>יצירת קשר</h2>
-<p>לשאלות בנושא פרטיות או לבקשת מחיקה: <a href="mailto:yahavsiso2@gmail.com">yahavsiso2@gmail.com</a></p>
+<p>לשאלות, בקשות מחיקה או פניות בנושא פרטיות: <a href="mailto:yahavsiso2@gmail.com">yahavsiso2@gmail.com</a></p>
 
 <div class="en">
-<h1>Privacy Policy — Matmati-Kef (English summary)</h1>
-<p><strong>Last updated:</strong> August 4, 2026</p>
-<p><strong>Matmati-Kef</strong> is an educational math-practice app. It works fully <strong>offline with no
-data collection</strong>, and the child's progress, profiles and nicknames <strong>always stay on the
-device</strong> — they are never uploaded. Optional <strong>anonymous usage statistics</strong> are enabled
-by a parent and use <strong>no account and no email</strong> — the install gets a <strong>random anonymous
-id</strong> and all data is stored under it. When enabled, the app collects only <strong>anonymous usage
-statistics</strong>: which games and modules were used and for how long, plus app-authored question
-identifiers with aggregate first-try success, failure, help use and response time — never the entered
-answer, the prompt text, a name, a nickname, photos or location, and no cross-app tracking. This is used
-to identify questions that need improvement. Data is <strong>never sold</strong>, and the app has
-<strong>no ads, no analytics SDKs, and no third-party tracking</strong>. Data is stored on
-<strong>Supabase</strong> (EU servers), isolated per install via Row-Level Security; usage data is kept up
-to ~12 months. Parents can turn collection off and delete all server data in-app at any time, per Google
-Play's Families policy and COPPA / GDPR-K. Contact / deletion:
+
+<h1>Privacy Policy — Matiki-Keyf</h1>
+<p><strong>Effective date:</strong> September 19, 2026</p>
+
+<p><strong>Matiki-Keyf</strong> ("the app") is an educational math-practice app. This document
+describes exactly what data leaves the device, when, and why.</p>
+
+<h2>No account, no ads, no third-party tracking</h2>
+<p>There is no sign-up, login, username or password. The app has no ads, no advertising/device ID for
+ads (Advertising ID / IDFA), no in-app purchases, and no third-party analytics or crash-reporting SDK.
+This build has no AI/LLM features of any kind.</p>
+
+<h2>One backend: Supabase</h2>
+<p>When data is sent at all (see below), it goes to a single hosting provider, <strong>Supabase</strong>,
+under an <strong>anonymous per-install identifier</strong> generated on the device. There is no email,
+password, or real account behind that identifier.</p>
+
+<h2>Nothing is sent before a parent agrees</h2>
+<p>The first time the app would send anything, it shows a one-time notice addressed to a parent, and no
+data leaves the device before that notice is accepted. Declining keeps the app fully local and
+functional.</p>
+
+<h2>What is sent, and why</h2>
+<p>Only after a parent accepts, three separate data sets may be sent:</p>
+<ul>
+  <li><strong>Anonymous daily usage summary</strong> — which topics/games were opened, counts of
+    correct/wrong/helped answers, and time spent. Typed answers are never sent, and no name or nickname
+    is attached to this data set.</li>
+  <li><strong>The child's chosen profile nickname</strong> — sent separately, used only by the
+    developer's private admin dashboard (not public, not visible to other players) to label usage data
+    per child.</li>
+  <li><strong>The profile nickname plus a game score</strong> — when playing on the shared
+    <strong>global leaderboard</strong>, the nickname and score are shown publicly to other players.</li>
+</ul>
+
+<h2>Leaderboard nickname safety</h2>
+<p>Nicknames are checked both on the device and on the server: 2–16 characters, and a filter against
+offensive words, links, emails and phone numbers. Every leaderboard entry can be reported. An entry
+reported by <strong>3 different devices</strong> is hidden automatically until the developer reviews
+it. Any device can also block another player locally (stored on-device only, never sent). A report
+stores the reporting device's anonymous ID, the reported entry, and a reason chosen from a fixed list —
+no free text.</p>
+
+<h2>Parent controls (PIN-protected parents area)</h2>
+<p>From the PIN-protected parents area, a parent can at any time: turn off sending data (also
+immediately removes the child's leaderboard entries), delete everything already sent to the server,
+unblock all blocked players, view a link to this policy, and contact the developer.</p>
+
+<h2>Reinstalling / uninstalling</h2>
+<p>The anonymous ID lives only on the device. Uninstalling the app loses it — delete data from the
+parents area <strong>before</strong> uninstalling, not after. Data tied to an old install can still be
+deleted on request by email, ideally with the install code shown in the parents area if you still have
+it.</p>
+
+<h2>Read-aloud</h2>
+<p>The read-aloud feature uses the device's built-in speech engine. The app does not record or send any
+audio.</p>
+
+<h2>What stays on the device only</h2>
+<p>Progress, achievements and personal settings stay on the device and are not part of the data
+described above.</p>
+
+<h2>Children</h2>
+<p>The app does not ask a child for a full name, email address, phone number, or location. The parent
+chooses the profile nickname.</p>
+
+<h2>Contact</h2>
+<p>For questions, deletion requests, or privacy inquiries:
 <a href="mailto:yahavsiso2@gmail.com">yahavsiso2@gmail.com</a></p>
+
 </div>
 
 </body>
